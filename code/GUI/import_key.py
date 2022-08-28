@@ -12,13 +12,13 @@ def import_form():
 
     customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
     customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
-
     app = customtkinter.CTkToplevel() 
 
     app.geometry("470x110")
     app.title('ເພີ່ມkey')
     app.resizable(0, 0)
-
+    app.grab_set()
+    
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 

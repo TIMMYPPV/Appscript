@@ -8,15 +8,12 @@ from numpy import mat
 from Utility.excel_function import *
 from Utility.report_function import *
 from Utility.decorator_code import *
-def button_function():
-        print("button pressed")
 
 def report_form():
     PATH = os.path.dirname(os.path.realpath(__file__))
 
     customtkinter.set_appearance_mode("System")  
     customtkinter.set_default_color_theme("blue")  
-
     app = customtkinter.CTkToplevel() 
     app.geometry("250x480")
     app.title("ລາຍງານ")
@@ -24,6 +21,7 @@ def report_form():
 
     app.grid_rowconfigure(0, weight=1)
     app.grid_columnconfigure(0, weight=1, minsize=200)
+    app.grab_set()
 
     frame_1 = customtkinter.CTkFrame(master=app, width=250, height=240, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
@@ -161,7 +159,7 @@ def report_menu_grade_statistic():
         print(choice)
         data = pd.read_excel("Subject.xlsx",choice)
         subject.configure(values=data.to_dict(orient="list")['Subject'])
-        print(data.to_dict(orient="list")['Subject'])
+        # print(data.to_dict(orient="list")['Subject'])
 
     namefile = excel_info("Score.xlsx").sheet_names
     subjectfile = excel_info("Subject.xlsx").sheet_names

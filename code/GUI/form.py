@@ -13,14 +13,12 @@ PATH = os.path.dirname(os.path.realpath(__file__))
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
-def button_function():
-    print("button pressed")
-
 def form_page():
     app = customtkinter.CTkToplevel()  # create CTk window like you do with the Tk window (you can also use normal tkinter.Tk window)
     app.geometry("210x220")
     app.title("ສ້າງຟອມ")
     app.resizable(0,0)
+    app.grab_set()
 
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
@@ -122,8 +120,8 @@ def create_form():
                     data.loc[j,"Sheet ID"]=sheet_id
                     grant_permission(data["email"][j],data.loc[j,"Spreadsheet ID"])
                     create_sheet_form(i,data.loc[j,"Spreadsheet ID"],data["Subject"][j],data["Lecture by"][j])
-                    print(int(data.loc[j,"Sheet ID"]))
-                    print(data.loc[j,"Spreadsheet ID"])
+                    # print(int(data.loc[j,"Sheet ID"]))
+                    # print(data.loc[j,"Spreadsheet ID"])
                     auto_adjust(int(data.loc[j,"Sheet ID"]),data.loc[j,"Spreadsheet ID"])
             write_file("Subject.xlsx",i,data)
 def add_permission_function(email:str,subject:str,room:str):

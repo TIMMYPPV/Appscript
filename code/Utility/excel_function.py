@@ -28,9 +28,9 @@ def read_file(filename:str,sheetname=""):
 def add_subject_to_teacher_file(filename:str,sheetname:str,df):
     if(exists('Subject.xlsx')):
         sheetnames = show_sheetnames(filename)
-        print(sheetname in sheetnames)
+        # print(sheetname in sheetnames)
         if(sheetname in sheetnames):
-            print(True)
+            # print(True)
             data = read_file("Subject.xlsx",sheetname)
             df = pd.concat([data,df],ignore_index=True).drop_duplicates(subset=['Subject'])
         else:

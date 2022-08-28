@@ -12,12 +12,11 @@ def add_data_menu():
 
     customtkinter.set_appearance_mode("System") 
     customtkinter.set_default_color_theme("blue")  
-
     app = customtkinter.CTkToplevel()
     app.geometry("220x220")
-    app.title("ເພີ່ມຂ້ໍ້ມູນ")
+    app.title("ເພີ່ມຂ້ໍມູນ")
     app.resizable(0,0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -122,7 +121,6 @@ def add_data_teacher():
     ok_button.grid(column=1,row=2,padx=5, pady=5)
 
 def add_student_data(filename:str,sheetname:str,app):
-    print("hello")
     if sheetname != "":
         if os.name == 'posix':
             filename = filename.replace('\\', ' ').strip()

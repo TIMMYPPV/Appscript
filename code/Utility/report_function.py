@@ -14,8 +14,7 @@ def report_score(room):
     for i in subject:
         data[i[1]]=i[2]
     row = pd.DataFrame(data,index=[0])
-    score = pd.concat([row,score]).reset_index(drop=True)
-    scoer = score.fillna("")
+    score = pd.concat([row,score]).reset_index(drop=True).fillna("")
     score.to_excel(str(Path.home())+'/Desktop/report_score.xlsx',room,index=False)
 
 def statistic_report_by_subject_by_room(room:str,subject:str):
@@ -156,7 +155,7 @@ def report_score_by_room_by_subject(sheetname:str,subject:str):
     line_height = pdf.font_size * 1.5
     col_width = pdf.epw / 4 
     col_width=[21.5,49.5,49.5,49.5]
-    print(col_width)
+    # print(col_width)
     def render_table_header():
         pdf.set_font('SaysetthaB', size=10)
         for i in range(0,len(TABLE_COL_NAMES)):

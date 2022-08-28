@@ -11,7 +11,7 @@ file_exists = exists(dirname(abspath(__file__))[:-8]+'/token.json')
 # print(dirname(abspath(__file__))[:-8])
 os.chdir(dirname(abspath(__file__))[:-8])
 # print(os.path.realpath(__file__))
-print(file_exists)
+# print(file_exists)
 if file_exists:
     credentials = service_account.Credentials.from_service_account_file('token.json', scopes=SCOPES)
     sheetservice = discovery.build('sheets', 'v4', credentials=credentials)

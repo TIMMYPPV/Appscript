@@ -25,8 +25,6 @@ app.title("CEIT Appscript")
 app.resizable(0,0)
 
 
-def button_function():
-    print("button pressed")
 
 image_size = 20
 
