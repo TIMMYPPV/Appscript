@@ -4,7 +4,6 @@ from tkinter import *
 import customtkinter
 import os
 from Utility.excel_function import *
-import os
 from Utility.google_sheet_function import *
 import threading 
 from Utility.decorator_code import *
@@ -50,7 +49,7 @@ def add_permission():
     app.geometry("340x200")
     app.title('ເພີ່ມ Permission')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 

@@ -65,7 +65,7 @@ def report_menu_grade_by_room():
     app.geometry("320x100")
     app.title('ລາຍງານເກຣດຕາມຫ້ອງ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -92,7 +92,7 @@ def report_menu_grade_by_subject():
     app.geometry("320x150")
     app.title('ລາຍງານເກຣດຕາມວິຊາ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -134,7 +134,7 @@ def report_menu_grade_statistic():
     app.geometry("320x150")
     app.title('ລາຍງານສະຖິຕິເກຣດ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -178,7 +178,7 @@ def report_menu_status_grade():
     app.geometry("320x100")
     app.title('ລາຍງານສະຖານະການສົ່ງເກຣດ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -206,7 +206,7 @@ def report_menu_statistic_grade_by_room():
     app.geometry("320x150")
     app.title('ລາຍງານສະຖິຕິເກຣດຕາມຫ້ອງ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -248,7 +248,7 @@ def report_menu_by_major():
     app.geometry("320x150")
     app.title('ລາຍງານສະຖິຕິເກຣດຕາມສາຍຮຽນ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 

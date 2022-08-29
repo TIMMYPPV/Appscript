@@ -43,7 +43,7 @@ def add_data_student():
     app.geometry("470x150")
     app.title('ເພີ່ມຂໍ້ມູນນັກຮຽນ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
@@ -81,7 +81,7 @@ def add_data_teacher():
     app.geometry("470x150")
     app.title('ເພີ່ມຂໍ້ມູນລາຍວິຊາແລະອາຈານ')
     app.resizable(0, 0)
-
+    app.grab_set()
     frame_1 = customtkinter.CTkFrame(master=app, width=120, height=170, corner_radius=15)
     frame_1.grid(row=0, column=0, padx=10, pady=10)
 
